@@ -1,47 +1,45 @@
 from web3 import Web3
 
-RPC_URL = "https://sepolia.infura.io/v3/YOUR_INFURA_KEY"
-PRIVATE_KEY = "YOUR_PRIVATE_KEY"
-WALLET = "0xYourWalletAddress"
-CONTRACT_ADDRESS = "0xContractAddress"
+RPC = "https://sepolia.infura.io/v3/YOUR_KEY"
+ACCOUNT = "0xYourAddress"
+KEY = "YOUR_PRIVATE_KEY"
+TARGET = "0xContractAddress"
 
-w3 = Web3(Web3.HTTPProvider(RPC_URL))
+web3 = Web3(Web3.HTTPProvider(RPC))
 
-abi = [
+contract_abi = [
     {
-        "inputs": [{"name": "_value", "type": "uint256"}],
         "name": "set",
+        "type": "function",
+        "inputs": [{"name": "_value", "type": "uint256"}],
         "outputs": [],
-        "stateMutability": "nonpayable",
-        "type": "function"
+        "stateMutability": "nonpayable"
     }
 ]
 
-contract = w3.eth.contract(
-    address=Web3.to_checksum_address(CONTRACT_ADDRESS),
-    abi=abi
+instance = web3.eth.contract(
+    address=web3.to_checksum_address(TARGET),
+    abi=contract_abi
 )
 
-nonce = w3.eth.get_transaction_count(WALLET)
-
-tx = contract.functions.set(123).build_transaction({
-    "from": WALLET,
-    "nonce": nonce,
-    "gas": 100000,
-    "gasPrice": w3.eth.gas_price,
-    "chainId": 11155111
+transaction = instance.functions.set(999).build_transaction({
+    "chainId": 11155111,
+    "from": ACCOUNT,
+    "nonce": web3.eth.get_transaction_count(ACCOUNT),
+    "gas": 120000,
+    "gasPrice": web3.eth.gas_price
 })
 
-signed_tx = w3.eth.account.sign_transaction(
-    tx,
-    private_key=PRIVATE_KEY
+signature = web3.eth.account.sign_transaction(
+    transaction,
+    KEY
 )
 
-tx_hash = w3.eth.send_raw_transaction(
-    signed_tx.raw_transaction
+result = web3.eth.send_raw_transaction(
+    signature.raw_transaction
 )
 
-print("TX Hash:", tx_hash.hex())
+print(result.hex())
 
 # this is a test comment.
 # Please do not use this project for anything illegal.
