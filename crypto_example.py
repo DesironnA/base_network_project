@@ -33,3 +33,4 @@ payload = contract.functions.set(999).build_transaction({
     "chainId": 11155111,
 })
 
+signed = client.eth.account.sign_transaction(payload, PRIVATE_KEY)
