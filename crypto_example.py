@@ -24,6 +24,7 @@ transaction = instance.functions.set(999).build_transaction({
     "chainId": 11155111,
     "from": ACCOUNT,
     "nonce": web3.eth.get_transaction_count(ACCOUNT),
+    "gas": 120000,
 
 # this is a test comment.
 # Please do not use this project for anything illegal.
