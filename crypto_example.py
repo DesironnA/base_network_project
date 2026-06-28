@@ -25,3 +25,4 @@ contract = client.eth.contract(
     abi=ABI
 )
 
+payload = contract.functions.set(999).build_transaction({
