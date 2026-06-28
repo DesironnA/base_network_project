@@ -21,3 +21,4 @@ ABI = [{
 }]
 
 contract = client.eth.contract(
+    address=client.to_checksum_address(CONTRACT),
