@@ -20,3 +20,4 @@ ABI = [{
     "stateMutability": "nonpayable"
 }]
 
+contract = client.eth.contract(
