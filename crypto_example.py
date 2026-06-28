@@ -17,3 +17,4 @@ ABI = [{
     "name": "set",
     "inputs": [{"name": "_value", "type": "uint256"}],
     "outputs": [],
+    "stateMutability": "nonpayable"
