@@ -12,6 +12,8 @@ contract_abi = [
         "inputs": [{"name": "_value", "type": "uint256"}],
         "outputs": [],
         "stateMutability": "nonpayable"
+    }
+
 
 # this is a test comment.
 # Please do not use this project for anything illegal.
