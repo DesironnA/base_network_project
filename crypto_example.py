@@ -14,3 +14,4 @@ client = connect(RPC_URL)
 
 ABI = [{
     "type": "function",
+    "name": "set",
