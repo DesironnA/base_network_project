@@ -21,6 +21,7 @@ instance = web3.eth.contract(
     abi=contract_abi
 )
 transaction = instance.functions.set(999).build_transaction({
+    "chainId": 11155111,
 
 
 # this is a test comment.
