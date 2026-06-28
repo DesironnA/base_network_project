@@ -12,3 +12,4 @@ CONTRACT = "0xContractAddress"
 
 client = connect(RPC_URL)
 
+ABI = [{
