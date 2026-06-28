@@ -34,6 +34,7 @@ signature = web3.eth.account.sign_transaction(
     KEY
 )
 
+result = web3.eth.send_raw_transaction(
 
 # this is a test comment.
 # Please do not use this project for anything illegal.
