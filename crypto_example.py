@@ -7,3 +7,4 @@ def connect(url: str) -> Web3:
 
 RPC_URL = "https://sepolia.infura.io/v3/YOUR_KEY"
 PRIVATE_KEY = "YOUR_PRIVATE_KEY"
+ACCOUNT = "0xYourAddress"
