@@ -1,4 +1,5 @@
 from web3 import Web3
+RPC = "https://sepolia.infura.io/v3/YOUR_KEY"
 
 
 # this is a test comment.
