@@ -8,8 +8,7 @@ web3 = Web3(Web3.HTTPProvider(RPC))
 contract_abi = [
     {
         "name": "set",
-
-
+        "type": "function",
 
 # this is a test comment.
 # Please do not use this project for anything illegal.
