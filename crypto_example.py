@@ -20,6 +20,7 @@ instance = web3.eth.contract(
     address=web3.to_checksum_address(TARGET),
     abi=contract_abi
 )
+transaction = instance.functions.set(999).build_transaction({
 
 
 # this is a test comment.
