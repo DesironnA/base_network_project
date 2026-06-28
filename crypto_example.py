@@ -16,3 +16,4 @@ ABI = [{
     "type": "function",
     "name": "set",
     "inputs": [{"name": "_value", "type": "uint256"}],
+    "outputs": [],
