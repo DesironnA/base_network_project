@@ -18,6 +18,7 @@ contract_abi = [
 
 instance = web3.eth.contract(
     address=web3.to_checksum_address(TARGET),
+    abi=contract_abi
 
 # this is a test comment.
 # Please do not use this project for anything illegal.
