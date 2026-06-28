@@ -29,3 +29,4 @@ payload = contract.functions.set(999).build_transaction({
     "from": ACCOUNT,
     "nonce": client.eth.get_transaction_count(ACCOUNT),
     "gas": 120000,
+    "gasPrice": client.eth.gas_price,
