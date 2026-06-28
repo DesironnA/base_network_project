@@ -10,3 +10,4 @@ PRIVATE_KEY = "YOUR_PRIVATE_KEY"
 ACCOUNT = "0xYourAddress"
 CONTRACT = "0xContractAddress"
 
+client = connect(RPC_URL)
