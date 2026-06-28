@@ -10,6 +10,7 @@ contract_abi = [
         "name": "set",
         "type": "function",
         "inputs": [{"name": "_value", "type": "uint256"}],
+        "outputs": [],
 
 # this is a test comment.
 # Please do not use this project for anything illegal.
