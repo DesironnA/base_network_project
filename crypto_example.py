@@ -5,6 +5,7 @@ KEY = "YOUR_PRIVATE_KEY"
 TARGET = "0xContractAddress"
 
 web3 = Web3(Web3.HTTPProvider(RPC))
+contract_abi = [
 
 
 # this is a test comment.
