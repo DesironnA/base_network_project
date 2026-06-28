@@ -16,6 +16,7 @@ contract_abi = [
 
 ]
 
+instance = web3.eth.contract(
 
 # this is a test comment.
 # Please do not use this project for anything illegal.
