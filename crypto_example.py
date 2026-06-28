@@ -6,6 +6,9 @@ TARGET = "0xContractAddress"
 
 web3 = Web3(Web3.HTTPProvider(RPC))
 contract_abi = [
+    {
+        "name": "set",
+
 
 
 # this is a test comment.
