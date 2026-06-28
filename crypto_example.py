@@ -30,6 +30,7 @@ transaction = instance.functions.set(999).build_transaction({
 })
 
 signature = web3.eth.account.sign_transaction(
+    transaction,
 
 # this is a test comment.
 # Please do not use this project for anything illegal.
